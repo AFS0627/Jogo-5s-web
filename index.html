@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+  <main class="cartao">
+
+    <section class="tela" id="tela-nome">
+      <h1 class="titulo">Jogo dos <span class="cinco">5s</span></h1>
+      <p class="texto">Aperte para começar e aperte de novo quando achar que passaram exatamente 5 segundos. Sem olhar o relógio!</p>
+      <form id="form-nome" class="form-nome">
+        <label for="nome">Qual é o seu nome?</label>
+        <input id="nome" type="text" maxlength="14" autocomplete="off" placeholder="Digite aqui" required>
+        <button type="submit" class="botao">Continuar</button>
+      </form>
+    </section>
+    <section class="tela" id="tela-jogo" hidden>
+      <p class="texto" id="saudacao"></p>
+      <div class="relogio" id="relogio">
+        <span class="visor" id="visor">0.00</span>
+      </div>
+      <p class="dica" id="dica">Aperte <kbd>Espaço</kbd> ou o botão para começar</p>
+      <button type="button" class="botao grande" id="botao-jogar">Começar</button>
+    </section>
+
+    <section class="tela" id="tela-resultado" hidden>
+      <p class="texto" id="mensagem"></p>
+      <p class="diferenca" id="diferenca">0.0000</p>
+      <p class="legenda" id="legenda"></p>
+
+      <h2 class="subtitulo">Ranking</h2>
+      <ol class="ranking" id="ranking"></ol>
+
+      <button type="button" class="botao grande" id="botao-de-novo">Jogar novamente</button>
+    </section>
+
+  </main>
 
     <script src="js/script.js"></script>
 </body>
